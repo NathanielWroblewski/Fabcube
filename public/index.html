@@ -1,0 +1,88 @@
+<h1>Welcome to the FAB CUBE</h1>
+<div class="center">
+  <div id="stage" style="width: 400px; height: 400px;">
+    <div id="spinner">
+      <div class="face1"></div>
+      <div class="face2"></div>
+      <div class="face3"></div>
+      <div class="face4"></div>
+      <div class="face5"></div>
+      <div class="face6"></div>
+    </div>
+  </div>
+  <style type="text/css">
+
+  h1 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  .center {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+  }
+
+  #spinner div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+    line-height: 400px;
+    font-size: 100px;
+  }
+
+  #spinner .face1 { 
+    -webkit-transform: translateZ(200px);
+    background: url("https://secure.gravatar.com/avatar/ef3e156f7b5fb36fb1dc5d98ceda5d0e?s=400&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png");
+    background-size: 400px 400px;
+  }
+  #spinner .face2 { 
+    -webkit-transform: rotateY(90deg) translateZ(200px);
+    background: url("https://sphotos-b.xx.fbcdn.net/hphotos-ash3/551666_10151060306782880_758892190_n.jpg");
+    background-size: 400px 400px;
+  }
+  #spinner .face3 {
+   -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(200px);
+   background: url("https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn2/9931_144807572879_6961398_n.jpg");
+   background-size: 400px 400px;
+ }
+ #spinner .face4 {
+   -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(200px); 
+   background: url("https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc1/302290_10150325723792880_1844408798_n.jpg");
+   background-size: 400px 400px;
+ }
+ #spinner .face5 {
+   -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(200px);
+   background: url("https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc1/251999_10150198018232880_1027106_n.jpg");
+   background-size: 400px 400px;
+ }
+ #spinner .face6 {
+   -webkit-transform: rotateX(-90deg) translateZ(200px);
+   background: url("https://sphotos-b.xx.fbcdn.net/hphotos-prn2/198050_10150105174312880_7791092_n.jpg");
+   background-size: 400px 400px;
+ }
+
+ @-webkit-keyframes spincube {
+  from,to  {                                                    }
+  16%      { -webkit-transform: rotateY(-90deg);                }
+  33%      { -webkit-transform:  rotateZ(90deg); }
+  50%      { -webkit-transform: rotateY(0deg) rotateX(90deg); }
+  66%      { -webkit-transform: rotateX(45deg) rotateY(45deg) rotateZ(-45deg);  }
+  83%      { -webkit-transform: rotateY(-145deg) rotateZ(180deg) rotateX(135deg);                 }
+}
+
+#spinner {
+  -webkit-animation-name: spincube;
+  -webkit-animation-timing-function: cubic-bezier(.06,1.16,.82,-0.17);
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 7s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 60px 60px 0;
+}
+
+</style>
